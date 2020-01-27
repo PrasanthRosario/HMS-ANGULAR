@@ -15,6 +15,9 @@ export class DoctorsComponent implements OnInit {
   constructor(private doctorService:DoctorService,private router:Router) { }
 
   ngOnInit() {
+    this.getDoctor();
+  }
+  getDoctor() {
     this.doctorService.getDoctors().subscribe(data =>{
       this.object=data;
       this.doctorList = this.object.setMessage;
@@ -28,7 +31,7 @@ export class DoctorsComponent implements OnInit {
     this.doctorService.deleteDoctor(id).subscribe(data =>{
       this.object=data;
       console.log(this.object.setMessage);
-      this.ngOnInit();
+      this.getDoctor();
       console.log(this.doctorList);
     });
   }
