@@ -1,0 +1,32 @@
+.container{
+    width: 80%;
+    margin: 0 auto; 
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.fixed-header{
+    // display: flex;
+    // align-content: center;
+    // justify-content: center;
+    width: 100%;
+    position: fixed;        
+    background: rgb(50, 200, 13);
+    padding: 10px 0;
+    color: #fff;
+}
+// #text{
+//     margin-left: 50%;
+// }
+.fixed-header{
+    top: 0;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+.container p{
+    line-height: 200px; 
+} 

@@ -1,0 +1,44 @@
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.flex-container > div {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F1F1F1;
+    margin: 10px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .user{
+      background-image: url("src/app/user.png");
+      height: 70px;
+      width: 70px;
+      margin: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  #bt{
+    font-family: 'Open Sans', sans-serif;
+      height: 20px;
+      width: 80px;
+      font-size: 10px;
+      margin: 10px;
+      text-align: center;
+  }
+  h2{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+  }
+  h3{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+  }
+#btn{
+    margin-left: 50%;
+    margin-top: 40px;
+}
+
+
+

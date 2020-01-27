@@ -1,0 +1,13 @@
+<div class="flex-container">
+    <div *ngIf="patient!=null">
+        <div class="user">
+        </div>
+         <h2>{{patient.firstname}}</h2>
+        <div>Id :{{patient.pkUserId}}<br><br> Firstname :{{patient.firstname}}<br><br> Lastname :{{patient.lastname}}<br><br>
+            MobileNumber:{{patient.phoneNumber}} <br><br> City :{{patient.city}}<br><br> State :{{patient.state}}<br><br> BloodGroup :{{patient.bloodGroup}}<br><br> Weight :{{patient.weight}}<br><br>
+        
+        </div>
+    </div >
+</div>
+<button id= "btn1" (click)="update()">UPDATE</button>
+<button id= "btn" (click)="back()">BACK</button>

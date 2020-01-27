@@ -1,0 +1,13 @@
+<div class="flex-container">
+    <div *ngFor="let doctor of doctorList">
+        <div class="user">
+      </div>
+        <!-- conert doctor into doctors -->
+        <h2>{{doctor.firstName}}</h2>
+        <div>Id :{{doctor.pkUserId}}<br><br> Firstname :{{doctor.firstname}}<br><br> Lastname :{{doctor.lastname}}<br><br>
+            MobileNumber:{{doctor.phoneNumber}} <br><br> City :{{doctor.city}}<br><br> State :{{doctor.state}}<br><br> Specialization :{{doctor.doctorSpecialization}}<br><br>
+        
+<button id= "btn" (click)="delete(doctor.pkUserId)">DELETE</button></div>
+    </div>
+</div>
+<button id= "btn" (click)="back()">BACK</button>
