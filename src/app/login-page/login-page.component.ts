@@ -18,6 +18,9 @@ password : string;
 users: any;
 error:string;
 show :boolean=false;
+label_1 = "SIGN IN";
+label_2 = "SIGN UP";
+color = "#2ecc71";
 // loginForm = new FormGroup({
 //   username : new FormControl(''),
 //   password : new FormControl('')

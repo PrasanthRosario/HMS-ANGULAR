@@ -12,4 +12,6 @@
 <button id= "btn" (click)="delete(doctor.pkUserId)">DELETE</button></div>
     </div>
 </div>
-<button id= "btn" (click)="back()">BACK</button>
+<!-- <button id= "btn" (click)="back()">BACK</button> -->
+<!-- -> -->
+    <app-button (click)="back()" [label]="label" [color] = "color" id = "btn"></app-button>

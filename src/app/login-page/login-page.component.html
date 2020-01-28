@@ -8,12 +8,13 @@
   
 <input type="password" name="password" [(ngModel)]="password"  class="password" />
   
-<a ><button (click)='login()' class="btn">SIGN IN</button></a> 
-<a ><button (click)='create()' class="btn">SIGN UP</button></a>
+<a ><app-button (click)='login()' [label]="label_1" [color] = "color" class="btn"></app-button></a> 
+<a ><app-button (click)='create()' [label]="label_2" [color] = "color" class="btn"class="btn"></app-button></a>
 </div> 
 <!-- <div>
     <button (click)='create()' class="btn">SIGN UP</button>
 </div> -->
+<!-- <app-button (click)='create()' [label]="label" [color] = "color"></app-button> -->
 <div *ngIf="show" class="alert" >
     <span class="closebtn" onclick= "window.location.reload();">&times;</span> 
     <strong>Wrong Credentials!</strong> 

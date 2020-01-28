@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class DoctorsComponent implements OnInit {
   object:any;
   doctorList:doctor[];
+  label: 'BACK';
+  color: 'black';
   constructor(private doctorService:DoctorService,private router:Router) { }
 
   ngOnInit() {

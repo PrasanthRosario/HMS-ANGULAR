@@ -12,8 +12,10 @@ import patient from "../patient";
 export class UpdateComponent implements OnInit {
 
   patient: patient = new patient();
-  id : string;
-  object : any;
+  id: string;
+  object: any;
+  label: 'UPDATE';
+  color: '#2ecc71';
   updatePatient : FormGroup;
   constructor(private route: ActivatedRoute, private router: Router, private service: PatientService) { }
   ngOnInit() {

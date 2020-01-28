@@ -15,6 +15,7 @@ import { UpdateComponent } from './update/update.component';
 import { PatientComponent } from './patient/patient.component';
 import { CreateComponent } from './create/create.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './button/button.component';
 
 //  import {MatIconModule} from '@angular/material/icon';
 @NgModule({
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DoctorsComponent,
     UpdateComponent,
     PatientComponent,
-    CreateComponent
+    CreateComponent,
+    ButtonComponent
   ],
   imports: [
    FormsModule,
