@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../patient.service';
-import patient from '../patient';
+import Patient from '../patient';
 import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-patient',
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 export class PatientComponent implements OnInit {
   object: any;
-  patient: patient;
+  patient: Patient;
   label1: 'UPDATE';
   label2: 'BACK';
   color1: '#2ecc71';

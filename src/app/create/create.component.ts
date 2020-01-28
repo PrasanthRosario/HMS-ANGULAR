@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PatientService } from '../patient.service';
-import patient from '../patient';
+import Patient from '../patient';
 import CustomValidator from '../validators';
 
 
@@ -12,7 +12,7 @@ import CustomValidator from '../validators';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
-  patient: patient = new patient();
+  patient: Patient = new Patient();
   validate: CustomValidator = new CustomValidator();
   // id : string;
   object: any;
@@ -41,7 +41,7 @@ export class CreateComponent implements OnInit {
     this.service.createPatient(this.createPatient.value).subscribe(data => {
       this.object = data;
       this.patient = this.object.setMessage;
-      console.log(patient);
+      console.log(this.patient);
       this.router.navigateByUrl('login');
     });
   }

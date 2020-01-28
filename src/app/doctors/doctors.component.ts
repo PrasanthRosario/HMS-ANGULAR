@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorService } from '../doctor.service';
-import doctor from '../doctor';
+import Doctor from '../doctor';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-doctors',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class DoctorsComponent implements OnInit {
   object: any;
-  doctorList: doctor[];
+  doctorList: Doctor[];
   label: 'BACK';
   color: 'black';
   constructor(private doctorService: DoctorService, private router: Router) { }

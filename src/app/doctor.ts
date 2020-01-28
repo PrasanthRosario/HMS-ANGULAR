@@ -1,5 +1,5 @@
 import patient from './patient';
-export default class doctor {
+export default class Doctor {
     pkUserId: number;
     username: string;
     password: string;

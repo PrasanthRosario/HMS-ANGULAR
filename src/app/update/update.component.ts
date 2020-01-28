@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PatientService } from '../patient.service';
-import patient from '../patient';
+import Patient from '../patient';
 
 @Component({
   selector: 'app-update',
@@ -11,7 +11,7 @@ import patient from '../patient';
 })
 export class UpdateComponent implements OnInit {
 
-  patient: patient = new patient();
+  patient: Patient = new Patient();
   id: string;
   object: any;
   label: 'UPDATE';
@@ -48,7 +48,7 @@ export class UpdateComponent implements OnInit {
     this.service.updatePatient(this.updatePatient.value).subscribe(data => {
       this.object = data;
       this.patient = this.object.setMessage;
-      console.log(patient);
+      console.log(this.patient);
       this.router.navigateByUrl('/dashboard');
     });
   }

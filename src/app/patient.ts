@@ -1,4 +1,4 @@
-export default class patient {
+export default class Patient {
     pkUserId = '';
     username = '';
     password = '';

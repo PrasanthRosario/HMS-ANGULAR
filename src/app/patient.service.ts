@@ -12,7 +12,7 @@ const httpOptions = {
 export class PatientService {
 
   constructor(private http: HttpClient) {
-  };
+  }
   localUrl: string;
   createPatient(patientData: patient) {
     this.localUrl = 'http://localhost:8080/patients/create';
