@@ -1,4 +1,4 @@
-import patient from "./patient";
+import patient from './patient';
 export default class doctor {
     pkUserId: number;
     username: string;
@@ -7,13 +7,13 @@ export default class doctor {
     firstname: string;
     lastname: string;
     city: string;
-    state:string;
+    state: string;
     // isActive
     pkDoctorId: number;
-    doctorSpecialization:string; 
+    doctorSpecialization: string;
     createdDate: Date;
     updatedDate: Date;
-    patientList:patient;
-    // roleId: 
+    patientList: patient;
+    // roleId:
 }
 

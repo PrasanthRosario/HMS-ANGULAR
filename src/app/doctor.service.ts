@@ -10,16 +10,16 @@ const httpOptions = {
 export class DoctorService {
 
   constructor(private http: HttpClient) {
-  };
-  localUrl: string ;
-
-  getDoctors():Observable<JSON>  {
-    this.localUrl = 'http://localhost:8080/doctors/getDoctors';
-        return this.http.get<JSON>(this.localUrl);
-    }
-    deleteDoctor(id : string): Observable<JSON> {
-      this.localUrl = 'http://localhost:8080/doctors/delete/' + id; 
-      return this.http.delete<JSON>(this.localUrl);
-    }
   }
+  localUrl: string;
+
+  getDoctors(): Observable<JSON> {
+    this.localUrl = 'http://localhost:8080/doctors/getDoctors';
+    return this.http.get<JSON>(this.localUrl);
+  }
+  deleteDoctor(id: string): Observable<JSON> {
+    this.localUrl = 'http://localhost:8080/doctors/delete/' + id;
+    return this.http.delete<JSON>(this.localUrl);
+  }
+}
 

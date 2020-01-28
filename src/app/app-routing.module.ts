@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component:LoginPageComponent
+    component: LoginPageComponent
   },
   {
     path: 'dashboard',

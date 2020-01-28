@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { LoginServiceService } from '../login-service.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -12,40 +12,36 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private service : LoginServiceService, private router:Router) { }
-username : string;
-password : string;
-users: any;
-error:string;
-show :boolean=false;
-label_1 = "SIGN IN";
-label_2 = "SIGN UP";
-color = "#2ecc71";
-// loginForm = new FormGroup({
-//   username : new FormControl(''),
-//   password : new FormControl('')
-// }
+  constructor(private service: LoginServiceService, private router: Router) { }
+  username: string;
+  password: string;
+  users: any;
+  error: string;
+  show = false;
+  label1 = 'SIGN IN';
+  label2 = 'SIGN UP';
+  color = '2ecc71';
 
   ngOnInit() {
 
   }
-  login(){
+  login() {
     this.service.username = this.username;
     this.service.password = this.password;
     //
-    this.error="INVALID CREDENTIALS";
-    this.service.login().subscribe(data=>{
+    this.error = 'INVALID CREDENTIALS';
+    this.service.login().subscribe(data => {
       this.users = data;
       this.service.id = this.users.setMessage.pkUserId;
       this.service.role = this.users.setMessage.fkRoleId;
-        if (this.service.role == 3) {
-          this.router.navigateByUrl('/dashboard');
-        } 
-    }, error =>{
+      if (this.service.role === 3) {
+        this.router.navigateByUrl('/dashboard');
+      }
+    }, error => {
       this.show = true;
       console.log(error);
     });
-  //  console.log(this.users);
+    //  console.log(this.users);
   }
   create() {
     this.router.navigateByUrl('/create');

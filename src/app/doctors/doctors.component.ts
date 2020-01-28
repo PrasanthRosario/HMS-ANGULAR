@@ -1,37 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { DoctorService } from '../doctor.service';
-import doctor from "../doctor";
+import doctor from '../doctor';
 import { Router } from '@angular/router';
-
-//convert patient into doctorss
 @Component({
   selector: 'app-doctors',
   templateUrl: './doctors.component.html',
   styleUrls: ['./doctors.component.scss']
 })
 export class DoctorsComponent implements OnInit {
-  object:any;
-  doctorList:doctor[];
+  object: any;
+  doctorList: doctor[];
   label: 'BACK';
   color: 'black';
-  constructor(private doctorService:DoctorService,private router:Router) { }
+  constructor(private doctorService: DoctorService, private router: Router) { }
 
   ngOnInit() {
     this.getDoctor();
   }
   getDoctor() {
-    this.doctorService.getDoctors().subscribe(data =>{
-      this.object=data;
+    this.doctorService.getDoctors().subscribe(data => {
+      this.object = data;
       this.doctorList = this.object.setMessage;
       console.log(this.doctorList);
     });
   }
-  back(){
-    this.router.navigateByUrl("/dashboard");
+  back() {
+    this.router.navigateByUrl('/dashboard');
   }
-  delete(id : string) {
-    this.doctorService.deleteDoctor(id).subscribe(data =>{
-      this.object=data;
+  delete(id: string) {
+    this.doctorService.deleteDoctor(id).subscribe(data => {
+      this.object = data;
       console.log(this.object.setMessage);
       this.getDoctor();
       console.log(this.doctorList);

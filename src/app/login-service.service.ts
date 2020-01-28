@@ -15,44 +15,44 @@ export class LoginServiceService {
 
 
   constructor(private http: HttpClient) {
-  };
+  }
 
-  localUrl: string = 'http://localhost:8080/login';
-  private _username: string;
-  private _password: string;
-  private _id: number;
-  private _role: number;
+  localUrl = 'http://localhost:8080/login';
+  private name: string;
+  private pass: string;
+  private userId: number;
+  private roleId: number;
   public get username(): string {
-    return this._username;
+    return this.name;
   }
   public set username(name: string) {
-    this._username = name;
+    this.name = name;
   }
   public get id(): number {
-    return this._id;
+    return this.userId;
   }
   public set id(id: number) {
-    this._id = id;
+    this.userId = id;
   }
   public get role(): number {
-    return this._role;
+    return this.roleId;
   }
   public set role(role: number) {
-    this._role = role;
+    this.roleId = role;
   }
   public get password(): string {
-    return this._password;
+    return this.pass;
   }
   public set password(password: string) {
-    this._password = password;
+    this.password = password;
   }
   login(): Observable<any> {
     return this.http.post<JSON>((this.localUrl), {
-      "username": this.username, "password": this.password
+      username: this.username, password: this.password
     }).pipe(catchError((error) => {
       console.log(error);
       return Observable.throw(error);
      } ));
-    };
+    }
   }
 

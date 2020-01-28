@@ -1,18 +1,18 @@
 export default class patient {
-    pkUserId: string = "";
-    username: string = "";
-    password: string = "";
-    phoneNumber: string = "";
-    firstname: string = "";
-    lastname: string ="";
-    city: string ="";
-    state:string = "";
+    pkUserId = '';
+    username = '';
+    password = '';
+    phoneNumber = '';
+    firstname = '';
+    lastname = '';
+    city = '';
+    state = '';
     // isActive
-    pkPatientId: number = 0;
-    bloodGroup : string = "";
-    weight : number =0;
-    createdDate: Date ;
+    pkPatientId = 0;
+    bloodGroup = '';
+    weight = 0;
+    createdDate: Date;
     updatedDate: Date;
-    fkRoleId: number = 0; 
+    fkRoleId = 0;
 }
 

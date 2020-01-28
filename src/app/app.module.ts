@@ -9,7 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
- import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { UpdateComponent } from './update/update.component';
 import { PatientComponent } from './patient/patient.component';
