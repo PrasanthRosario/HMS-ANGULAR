@@ -1,3 +1,7 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
 .flex-container{
     display: flex;
     flex-wrap: wrap;
@@ -5,7 +9,7 @@
     margin-left: 20%;
 }
 .flex-container > div {
-  font-family: "Open Sans", sans-serif;
+  // font-family: "Open Sans", sans-serif;
   background-color: #F1F1F1;
   margin-left: 300px;
   margin-top: 1px;
@@ -22,7 +26,7 @@
       background-repeat: no-repeat;
   }
   #bt{
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
       height: 20px;
       width: 80px;
       font-size: 10px;
@@ -30,11 +34,11 @@
       text-align: center;
   }
   h2{
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
     text-align: center;
   }
   h3{
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
     text-align: center;
   }
 #btn{

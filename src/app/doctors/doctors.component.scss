@@ -1,3 +1,7 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
 .flex-container{
     display: flex;
     flex-wrap: wrap;
@@ -5,7 +9,6 @@
     margin-left: 20%;
 }
 .flex-container > div {
-    font-family: 'Open Sans', sans-serif;
     background-color: #F1F1F1;
     margin: 10px;
     padding: 10px;

@@ -14,6 +14,8 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { UpdateComponent } from './update/update.component';
 import { PatientComponent } from './patient/patient.component';
 import { CreateComponent } from './create/create.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 //  import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
@@ -32,8 +34,8 @@ import { CreateComponent } from './create/create.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
-
+    HttpClientModule,
+    ReactiveFormsModule
     // MatIconModule
   ],
   providers: [],

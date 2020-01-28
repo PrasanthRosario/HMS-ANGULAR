@@ -1,5 +1,4 @@
-
-<div class = "container">
+<!-- <div class = "container">
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" #username required>
     <label><b>Password</b></label>
@@ -23,5 +22,97 @@
     
     <button type="submit" class="registerbtn" (click)="create(username.value,password.value,firstname.value,lastname.value,city.value,state.value,phoneNumber.value,weight.value,bloodGroup.value,fkRoleId.value)">REGISTER</button>
     
-    <!-- <button id= "btn1" (click)="back()">BACK</button> -->
+    <button id= "btn1" (click)="back()">BACK</button> 
+    </div> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+<form class="container" [formGroup]="createPatient" (ngSubmit)="create()">
+    <label><b>Username</b></label>
+    <input type="text" formControlName="username">
+    <div *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)" class="alert alert-danger">
+        <div *ngIf="f.username.errors.required" id="alert">
+            username is required.
+        </div>
+        <div *ngIf="f.username.errors.minlength" id="alert">
+            username must be at least 4 characters long.
+        </div>
     </div>
+    <label><b>Password</b></label>
+    <input type="text" formControlName="password">
+    <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="alert alert-danger">
+        <div *ngIf="f.password.errors.required" id="alert">
+            password is required.
+        </div>
+        <div *ngIf="f.password.errors.minlength" id="alert">
+            password must be at least 4 characters long.
+        </div>
+    </div>
+    <label><b>FirstName</b></label>
+    <input type="text" formControlName="firstname">
+    <div *ngIf="f.firstname.invalid && (f.firstname.dirty || f.firstname.touched)" class="alert alert-danger">
+        <div *ngIf="f.firstname.errors.required" id="alert">
+            firstname is required.
+        </div>
+    </div>
+    <label><b>LastName</b></label>
+    <input type="text" formControlName="lastname">
+    <div *ngIf="f.lastname.invalid && (f.lastname.dirty || f.lastname.touched)" class="alert alert-danger">
+        <div *ngIf="f.lastname.errors.required" id="alert">
+            lastname is required.
+        </div>
+    </div>
+    <label><b>city</b></label>
+    <input type="text" formControlName="city">
+    <div *ngIf="f.city.invalid && (f.city.dirty || f.city.touched)" class="alert alert-danger">
+        <div *ngIf="f.city.errors.required" id="alert">
+            CITY is required.
+        </div>
+    </div>
+    <label><b>state</b></label>
+    <input type="text" formControlName="state">
+    <div *ngIf="f.state.invalid && (f.state.dirty || f.state.touched)" class="alert alert-danger">
+        <div *ngIf="f.state.errors.required" id="alert">
+            state is required.
+        </div>
+    </div>
+    <label><b>Role</b></label>
+    <input type="text" formControlName="fkRoleId">
+    <div *ngIf="f.fkRoleId.invalid && (f.fkRoleId.dirty || f.fkRoleId.touched)" class="alert alert-danger">
+        <div *ngIf="f.fkRoleId.errors.required" id="alert">
+            Role is required.
+        </div>
+    </div>
+    <label><b>PhoneNumber</b></label>
+    <input type="text" formControlName="phoneNumber">
+    <div *ngIf="f.phoneNumber.invalid && (f.phoneNumber.dirty || f.phoneNumber.touched)" class="alert alert-danger">
+        <div *ngIf="f.phoneNumber.errors.required" id="alert">
+            phoneNumber is required.
+        </div>
+        <div *ngIf="f.phoneNumber.errors.minlength" id="alert">
+            phoneNumber must be at least 10 characters long.
+        </div>
+        <div *ngIf="f.phoneNumber.errors.maxlength" id="alert">
+            phoneNumber must be less than 12 characters long.
+        </div>
+        <div *ngIf="f.phoneNumber.errors.validatePhoneNumber" id="alert">
+            phoneNumber is not VALID.
+        </div>
+    </div>
+    <label><b>weight</b></label>
+    <input type="text" formControlName="weight">
+    <div *ngIf="f.weight.invalid && (f.weight.dirty || f.weight.touched)" class="alert alert-danger">
+        <div *ngIf="f.weight.errors.required" id="alert">
+            Weight is required.
+        </div>
+    </div>
+    <label><b>BloodGroup</b></label>
+    <input type="text" formControlName="bloodGroup">
+    <div *ngIf="f.bloodGroup.invalid && (f.bloodGroup.dirty || f.bloodGroup.touched)" class="alert alert-danger">
+        <div *ngIf="f.bloodGroup.errors.required" id="alert">
+            bloodGroup is required.
+        </div>
+        <div *ngIf="f.bloodGroup.errors.validateBloodGroup" id="alert">
+          Invalid Blood Group.
+        </div>
+    </div>
+    <button type="submit" class="registerbtn">REGISTER</button>
+</form>

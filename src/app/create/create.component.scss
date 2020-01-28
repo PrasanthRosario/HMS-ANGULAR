@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    // font-family: Comic Sans, Comic Sans MS, cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   
   /* Add padding to containers */
@@ -62,6 +65,12 @@
   .signin {
     background-color: #F1F1F1;
     text-align: center;
+  }
+  #alert {
+    padding: 10px;
+    background-color: #EE8E87;
+    color: white;
+    border-radius: 10px;
   }
   // #btn1{
   //   margin-left: 45%;

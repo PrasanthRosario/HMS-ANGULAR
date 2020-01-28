@@ -18,6 +18,10 @@ password : string;
 users: any;
 error:string;
 show :boolean=false;
+// loginForm = new FormGroup({
+//   username : new FormControl(''),
+//   password : new FormControl('')
+// }
 
   ngOnInit() {
 
@@ -43,5 +47,8 @@ show :boolean=false;
   create() {
     this.router.navigateByUrl('/create');
   }
-
+  // back() {
+  //   this.router.navigateByUrl('/login');
+  //   window.Ev
+  // }
 }
