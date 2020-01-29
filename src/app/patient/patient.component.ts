@@ -11,10 +11,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PatientComponent implements OnInit {
   object: any;
   patient: Patient;
-  label1: 'UPDATE';
-  label2: 'BACK';
-  color1: '#2ecc71';
-  color2: 'black';
+  label1 = 'UPDATE';
+  label2 = 'BACK';
+  color1 = '#2ecc71';
+  color2 = 'black';
   constructor(private route: ActivatedRoute, private patientService: PatientService, private router: Router) { }
 
   ngOnInit() {

@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   // icon = icons[faUserCircle];
   // faUserCircle = faUserCircle;
   ngOnInit() {
-    this.username = this.service.username;
+    this.username = this.service.name;
     console.log(this.username);
   }
   getDoctors() {
@@ -27,8 +27,9 @@ export class DashboardComponent implements OnInit {
   }
   getPatients() {
     this.show = false;
-    this.id = this.service.id;
-    this.router.navigate(['patient', this.id]);
+    this.id = this.service.userId;
+    console.log(this.id);
+    this.router.navigateByUrl('/patient/' + this.id);
   }
 
 }

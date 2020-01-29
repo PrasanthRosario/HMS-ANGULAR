@@ -26,17 +26,17 @@ export class LoginPageComponent implements OnInit {
 
   }
   login() {
-    this.service.username = this.username;
-    this.service.password = this.password;
+    this.service.name = this.username;
+    this.service.pass = this.password;
     //
     this.error = 'INVALID CREDENTIALS';
     this.service.login().subscribe(data => {
       this.users = data;
-      this.service.id = this.users.setMessage.pkUserId;
-      this.service.role = this.users.setMessage.fkRoleId;
-      if (this.service.role === 3) {
-        this.router.navigateByUrl('/dashboard');
-      }
+      this.service.userId = this.users.setMessage.pkUserId;
+      this.service.roleId = this.users.setMessage.fkRoleId;
+      // if (this.service.role === 3) {
+      this.router.navigateByUrl('/dashboard');
+      // }
     }, error => {
       this.show = true;
       console.log(error);
