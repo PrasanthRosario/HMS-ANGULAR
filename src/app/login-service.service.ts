@@ -12,7 +12,7 @@ export class LoginServiceService {
   constructor(private http: HttpClient) {
   }
 
-  localUrl = 'http://localhost:8080/login';
+  localUrl = 'http://hospitalmanagement-env.jmgi9su3y3.us-east-1.elasticbeanstalk.com:8080/login';
   name: string;
   pass: string;
   userId: number;

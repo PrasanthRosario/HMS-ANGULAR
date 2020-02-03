@@ -15,15 +15,15 @@ export class PatientService {
   }
   localUrl: string;
   createPatient(patientData: patient) {
-    this.localUrl = 'http://localhost:8080/patients/create';
+    this.localUrl = 'http://hospitalmanagement-env.jmgi9su3y3.us-east-1.elasticbeanstalk.com:8080/patients/create';
     return this.http.post<patient>(this.localUrl, patientData);
   }
 
   getPatient(id: string): Observable<JSON> {
-    this.localUrl = 'http://localhost:8080/patients/' + id;
+    this.localUrl = 'http://hospitalmanagement-env.jmgi9su3y3.us-east-1.elasticbeanstalk.com:8080/patients/' + id;
     return this.http.get<JSON>(this.localUrl);
   }
   updatePatient(patientData: patient) {
-    return this.http.put<patient>('http://localhost:8080/patients/update', patientData);
+    return this.http.put<patient>('http://hospitalmanagement-env.jmgi9su3y3.us-east-1.elasticbeanstalk.com:8080/patients/update', patientData);
   }
 }

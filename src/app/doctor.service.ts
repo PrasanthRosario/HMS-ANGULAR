@@ -14,11 +14,11 @@ export class DoctorService {
   localUrl: string;
 
   getDoctors(): Observable<JSON> {
-    this.localUrl = 'http://localhost:8080/doctors/getDoctors';
+    this.localUrl = 'http://hospitalmanagement-env.jmgi9su3y3.us-east-1.elasticbeanstalk.com:8080/doctors/getDoctors';
     return this.http.get<JSON>(this.localUrl);
   }
   deleteDoctor(id: string): Observable<JSON> {
-    this.localUrl = 'http://localhost:8080/doctors/delete/' + id;
+    this.localUrl = 'http://hospitalmanagement-env.jmgi9su3y3.us-east-1.elasticbeanstalk.com:8080/doctors/delete/' + id;
     return this.http.delete<JSON>(this.localUrl);
   }
 }
